@@ -21,7 +21,6 @@ public class ProducerServlet extends HttpServlet {
         String licensePlate = req.getParameter("licensePlate");
         String price = req.getParameter("price");
         String message = "";
-//        BankClient bankClient = new BankClient(name, password, Long.parseLong(money) );
         try {
             if(CarService.getInstance().addCar(brand, model, licensePlate, Long.valueOf(price)))
             {
